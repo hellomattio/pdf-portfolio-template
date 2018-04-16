@@ -20,6 +20,8 @@ A template using HTML5 and CSS3 to style exportable PDF documents for my portfol
 
 **4. Generate PDF**
 
-```cd pdf-portfolio-template/
-weasyprint ./portfolio_sample.html ./output_sample.pdf
-```
+`cd pdf-portfolio-template/`
+
+`weasyprint ./portfolio_sample.html ./output_sample.pdf`
+
+`open output_sample.pdf`
