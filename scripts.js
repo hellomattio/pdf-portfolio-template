@@ -4,7 +4,7 @@ const projectAuthor = "Matt Doyle";
 
 // Create section class
 class Section {
-  constructor(sectionTitle) {
+  constructor(sectionTitle = "Error: section name not defined") {
     this.sectionName = sectionTitle.replace(/\s/g, '-');
     this.sectionName = this.sectionName.toLowerCase();
     this.sectionTitle = sectionTitle;
@@ -14,14 +14,6 @@ class Section {
     this.div.innerHTML = `<h1>${sectionTitle}</h1>`;
     this.div.className = "section";
     this.target.parentNode.insertBefore(this.div, this.target.lastSibling);
-  }
-
-  createTitlePage() {
-    // TODO
-  }
-
-  createToc() {
-    // TODO
   }
 
   addParagraph (paragraph) {
@@ -81,8 +73,33 @@ updateProjectName = () => {
   }
 }
 
+createTitlePage = () => {
+  const target = document.querySelector('#title-page');
+  target.innerHTML = `
+    <h1>${projectTitle}</h1>
+    `;
+}
+
+createFooter = () => {
+  const css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = `
+    h1 {
+      color: green;
+    }
+  `
+  document.head.appendChild(css);
+}
+
+createToc = () => {
+  // TODO
+}
+
 // Update DOM
 // Document setup
 document.title = projectTitle;
 document.author = projectAuthor;
+//style.setProperty('--project-name', projectName);
+
 updateProjectName();
+createFooter();
