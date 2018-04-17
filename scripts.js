@@ -46,15 +46,27 @@ const addCodeBlock = (codeBlock) => {
   // TODO
 }
 
-const addOrderedList = ([listItem]]) => {
+const addOrderedList = ([listItem]) => {
   // TODO
 }
 
-const addUnorderedList = ([listItem]]) => {
+const addUnorderedList = ([listItem]) => {
   // TODO
 }
 
-const addTool = ([listItem]]) => {
+const addTool = ([tool]) => {
+  // TODO
+}
+
+const addColorPallet = ([color]) => {
+  // TODO
+}
+
+const addTypeFace = (typeface) => {
+  // TODO
+}
+
+const addUserStory = ([userStory]) => {
   // TODO
 }
 
