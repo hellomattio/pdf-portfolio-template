@@ -19,19 +19,20 @@ const updateProjectName = () => {
 }
 
 const addSection = (sectionName, sectionTitle) => {
-  let target = document.querySelector("#toc");
-  let div = document.createElement("div");
+  const target = document.querySelector("#toc");
+  const div = document.createElement("div");
   div.id = sectionName;
   div.innerHTML = `<h1>${sectionTitle}</h1>`;
   target.parentNode.insertBefore(div, target.lastSibling);
 }
 
 const addParagraph = (sectionName, paragraph) => {
-  let target = document.querySelector(`#${sectionName}`);
-  let newParagraph = document.createElement("p");
+  const target = document.querySelector(`#${sectionName}`);
+  console.log(target);
+  const newParagraph = document.createElement("p");
   newParagraph.className = "section-paragraph";
   newParagraph.innerHTML = paragraph;
-  target.parentNode.insertBefore(newParagraph, target.lastSibling);
+  target.appendChild(newParagraph);
 }
 
 const addImage = (source, caption, style = "block", size = "medium") => {

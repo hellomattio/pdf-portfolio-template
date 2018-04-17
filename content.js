@@ -1,4 +1,4 @@
-addSection("introduction", "This is the introductory title");
+addSection("introduction", "Introduction");
 
 addParagraph(
   "introduction",
@@ -8,4 +8,16 @@ addParagraph(
 addParagraph(
   "introduction",
   "This is another paragraph. Where will it go?"
+);
+
+addSection("approach", "Approach");
+
+addParagraph(
+  "approach",
+  "Description of approach."
+);
+
+addParagraph(
+  "introduction",
+  "More information about the approach. To test a bug, this should end up in the intro, <b>but isn't...</b>"
 );
