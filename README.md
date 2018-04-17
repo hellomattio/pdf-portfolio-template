@@ -9,6 +9,7 @@ A template using HTML5, CSS3 and JavaScript (ES6) to create and stylise exportab
 - [pip](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py "pip")
 - [Google Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md "Google Chrome")
 
+### Instructions
 **1. Install WeasyPrint**
 
 `pip3 install WeasyPrint`
