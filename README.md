@@ -1,7 +1,7 @@
 # pdf-portfolio-template
 A template using HTML5 and CSS3 to style exportable PDF documents for my portfolio.
 
-## Quick start guide for MacOS
+## Setup guide for MacOS
 *Refer to the [WeasyPrint Documentation](http://weasyprint.readthedocs.io/en/latest/install.html "WeasyPrint Documentation") for additional operating systems.*
 
 **1. Install WeasyPrint**
@@ -25,3 +25,11 @@ A template using HTML5 and CSS3 to style exportable PDF documents for my portfol
 `weasyprint ./portfolio_sample.html ./output_sample.pdf`
 
 `open output_sample.pdf`
+
+## How to use
+
+TODO
+
+## Documentation
+
+TODO
