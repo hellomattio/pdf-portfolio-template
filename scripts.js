@@ -29,51 +29,53 @@ const addSection = (sectionName, sectionTitle) => {
 
 const addParagraph = (sectionName, paragraph) => {
   const target = document.querySelector(`#${sectionName}`);
-  console.log(target);
   const newParagraph = document.createElement("p");
   newParagraph.className = "section__paragraph";
   newParagraph.innerHTML = paragraph;
   target.appendChild(newParagraph);
 }
 
-const addImage = (source, caption, style = "block", size = "medium") => {
+const addImage = (sectionName, source, style = "default", size = "medium") => {
+  const target = document.querySelector(`#${sectionName}`);
+  const newImage = document.createElement("img");
+  newImage.src = source;
+  target.appendChild(newImage);
+}
+
+const addImageGrid = (sectionName, [source], percentMaxHeight) => {
   // TODO
 }
 
-const addImageGrid = ([source], percentMaxHeight) => {
+const addCodeBlock = (sectionName, codeBlock) => {
   // TODO
 }
 
-const addCodeBlock = (codeBlock) => {
+const addOrderedList = (sectionName, [listItem]) => {
   // TODO
 }
 
-const addOrderedList = ([listItem]) => {
+const addUnorderedList = (sectionName, [listItem]) => {
   // TODO
 }
 
-const addUnorderedList = ([listItem]) => {
+const addTool = (sectionName, [tool]) => {
   // TODO
 }
 
-const addTool = ([tool]) => {
+const addColorPallet = (sectionName, [color]) => {
   // TODO
 }
 
-const addColorPallet = ([color]) => {
+const addTypeFace = (sectionName, typeface) => {
   // TODO
 }
 
-const addTypeFace = (typeface) => {
-  // TODO
-}
-
-const addUserStory = ([userStory]) => {
+const addUserStory = (sectionName, [userStory]) => {
   // TODO
 }
 
 // Update DOM
+// Document setup
 document.title = projectTitle;
 document.author = projectAuthor;
-
 updateProjectName();
