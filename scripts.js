@@ -3,20 +3,22 @@ const projectTitle = "Cochlear Remote Assistance (iOS)";
 const projectAuthor = "Matt Doyle";
 
 // Define functions
-const updateTocHeader = () => {
+const createTitlePage = () => {
+  // TODO
+}
+
+const createToc = () => {
+  // TODO
+}
+
+const updateProjectName = () => {
   elements = document.getElementsByClassName('project-name');
   for (element of elements) {
     element.innerHTML = projectTitle;
   }
 }
 
-// Update DOM
-document.title = projectTitle;
-document.author = projectAuthor;
-
-updateTocHeader();
-
-let addSection = (sectionName, sectionTitle) => {
+const addSection = (sectionName, sectionTitle) => {
   let target = document.querySelector("#toc");
   let div = document.createElement("div");
   div.id = sectionName;
@@ -24,10 +26,40 @@ let addSection = (sectionName, sectionTitle) => {
   target.parentNode.insertBefore(div, target.lastSibling);
 }
 
-let addParagraph = (sectionName, paragraph) => {
+const addParagraph = (sectionName, paragraph) => {
   let target = document.querySelector(`#${sectionName}`);
   let newParagraph = document.createElement("p");
   newParagraph.className = "section-paragraph";
   newParagraph.innerHTML = paragraph;
   target.parentNode.insertBefore(newParagraph, target.lastSibling);
 }
+
+const addImage = (source, caption, style = "block", size = "medium") => {
+  // TODO
+}
+
+const addImageGrid = ([source], percentMaxHeight) => {
+  // TODO
+}
+
+const addCodeBlock = (codeBlock) => {
+  // TODO
+}
+
+const addOrderedList = ([listItem]]) => {
+  // TODO
+}
+
+const addUnorderedList = ([listItem]]) => {
+  // TODO
+}
+
+const addTool = ([listItem]]) => {
+  // TODO
+}
+
+// Update DOM
+document.title = projectTitle;
+document.author = projectAuthor;
+
+updateProjectName();
