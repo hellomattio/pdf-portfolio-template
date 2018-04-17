@@ -23,6 +23,7 @@ const addSection = (sectionName, sectionTitle) => {
   const div = document.createElement("div");
   div.id = sectionName;
   div.innerHTML = `<h1>${sectionTitle}</h1>`;
+  div.className = "section"
   target.parentNode.insertBefore(div, target.lastSibling);
 }
 
@@ -30,7 +31,7 @@ const addParagraph = (sectionName, paragraph) => {
   const target = document.querySelector(`#${sectionName}`);
   console.log(target);
   const newParagraph = document.createElement("p");
-  newParagraph.className = "section-paragraph";
+  newParagraph.className = "section__paragraph";
   newParagraph.innerHTML = paragraph;
   target.appendChild(newParagraph);
 }

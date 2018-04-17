@@ -1,3 +1,9 @@
+// Configure document
+const projectTitle = "Cochlear Remote Assistance (iOS)";
+const projectAuthor = "Matt Doyle";
+
+// Add content below:
+
 addSection("introduction", "Introduction");
 
 addParagraph(
@@ -18,6 +24,6 @@ addParagraph(
 );
 
 addParagraph(
-  "introduction",
-  "More information about the approach. To test a bug, this should end up in the intro, <b>but isn't...</b>"
+  "approach",
+  "More information about the approach."
 );
