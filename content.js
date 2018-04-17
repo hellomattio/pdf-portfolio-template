@@ -1,29 +1,11 @@
-// Configure document
-const projectTitle = "Cochlear Remote Assistance (iOS)";
-const projectAuthor = "Matt Doyle";
-
 // Add content below:
 
-addSection("introduction", "Introduction");
+createTitlePage();
 
-addParagraph(
-  "introduction",
-  "My nephew, Henry, was born with severe hearing loss. His hearing ability was limited to 110 dB, the magnitude of which would cause others hearing damage. It was declared he would need hearing aids for the rest of his life. Even then, this would only get him to around 50-60 dB. Still not enough to hear or distinguish speech."
-);
+const introduction = new Section("Introduction");
+introduction.addParagraph("My nephew, Henry, was born with severe hearing loss. His hearing ability was limited to 110 dB, the magnitude of which would cause others hearing damage. It was declared he would need hearing aids for the rest of his life. Even then, this would only get him to around 50-60 dB. Still not enough to hear or distinguish speech.");
+introduction.addParagraph("This is another paragraph in the introduction.");
 
-addParagraph(
-  "introduction",
-  "This is another paragraph. Where will it go?"
-);
-
-addSection("approach", "Approach");
-
-addParagraph(
-  "approach",
-  "Description of approach."
-);
-
-addParagraph(
-  "approach",
-  "More information about the approach."
-);
+const approach = new Section("Approach");
+approach.addParagraph("test paragraph 2");
+approach.addImage("assets/1.jpg");
