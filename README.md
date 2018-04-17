@@ -1,8 +1,12 @@
 # pdf-portfolio-template
 A template using HTML5, CSS3 and JavaScript (ES6) to create and stylise exportable PDF documents for projects in my portfolio.
 
-## Setup guide for MacOS (requires [Homebrew](https://brew.sh/ "Homebrew"))
+## Setup guide for MacOS
 *Refer to the [WeasyPrint Documentation](http://weasyprint.readthedocs.io/en/latest/install.html "WeasyPrint Documentation") for installing WeasyPrint, and the [PhantomJS Download Page](http://phantomjs.org/download.html "PhantomJS Download Page") for installing PhantomJS on other operating systems.*
+
+### Requirements
+- [Homebrew](https://brew.sh/ "Homebrew")
+- [pip](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py "pip")
 
 **1. Install WeasyPrint**
 
