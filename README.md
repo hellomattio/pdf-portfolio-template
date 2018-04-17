@@ -4,18 +4,24 @@ A template using HTML5 and CSS3 to style exportable PDF documents for my portfol
 ## Quick start guide for MacOS
 *Refer to the [WeasyPrint Documentation](http://weasyprint.readthedocs.io/en/latest/install.html "WeasyPrint Documentation") for additional operating systems.*
 
-**Install WeasyPrint**
+**1. Install WeasyPrint**
 
 `pip3 install WeasyPrint`
 
-**Install WeasyPrint dependencies**
+**2. Install WeasyPrint dependencies**
 
 `brew install python3 cairo pango gdk-pixbuf libffi`
 
-**Download sample files**
+**3. Download sample files**
 
-`wget "https://github.com/hellomattio/pdf-portfolio-template.git"`
+`cd` into your working directory.
 
-**Generate PDF**
+`git clone https://github.com/hellomattio/pdf-portfolio-template.git`
 
-*Coming soon...*
+**4. Generate PDF**
+
+`cd pdf-portfolio-template/`
+
+`weasyprint ./portfolio_sample.html ./output_sample.pdf`
+
+`open output_sample.pdf`
