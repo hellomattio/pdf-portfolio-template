@@ -8,3 +8,6 @@ weasyprint ./output.html ./output/output_sample.pdf
 
 # Cleanup
 rm output.html
+
+# Open generated PDF
+open output/output_sample.pdf
