@@ -1,5 +1,5 @@
 // Configure document
-const projectTitle = "PDF portfolio exporter";
+const projectTitle = "Cochlear Remote Assistance (iOS)";
 const projectAuthor = "Matt Doyle";
 
 // Define functions
@@ -15,3 +15,19 @@ document.title = projectTitle;
 document.author = projectAuthor;
 
 updateTocHeader();
+
+let addSection = (sectionName, sectionTitle) => {
+  let target = document.querySelector("#toc");
+  let div = document.createElement("div");
+  div.id = sectionName;
+  div.innerHTML = `<h1>${sectionTitle}</h1>`;
+  target.parentNode.insertBefore(div, target.nextSibling);
+}
+
+let addParagraph = (sectionName, paragraph) => {
+  let target = document.querySelector(`#${sectionName}`);
+  let newParagraph = document.createElement("p");
+  newParagraph.className = "section-paragraph";
+  newParagraph.innerHTML = paragraph;
+  target.parentNode.insertBefore(newParagraph, target.nextSibling);
+}
