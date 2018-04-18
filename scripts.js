@@ -75,7 +75,7 @@ updateProjectName = () => {
   }
 }
 
-createTitlePage = () => {
+createCoverPage = () => {
   const target = document.querySelector('.cover-page');
   target.innerHTML = `
     <h1 class="cover-page__title">${projectTitle}</h1>
@@ -84,7 +84,7 @@ createTitlePage = () => {
     `;
 }
 
-createFooter = () => {
+createFooterContent = () => {
   const css = document.createElement("style");
   css.type = "text/css";
   css.innerHTML = `
@@ -115,13 +115,48 @@ createToc = () => {
     `;
 }
 
+createToolDisplay = () => {
+  const target = document.querySelector('.cover-page');
+  const toolDisplay = document.createElement("div");
+  toolDisplay.className = "tool-display";
+  toolDisplay.innerHTML = `
+  <div class="grid-container grid-container__fit">
+    <div><p>Built on:</p></div>
+    <div class="grid-element">
+      <img src="tools/css3-plain-wordmark.svg">
+    </div>
+    <div class="grid-element">
+      <i class="devicon-css3-plain-wordmark"></i>
+    </div>
+    <div class="grid-element">
+      3
+    </div>
+    <div class="grid-element">
+      4
+    </div>
+    <div class="grid-element">
+      5
+    </div>
+    <div class="grid-element">
+      6
+    </div>
+    <div class="grid-element">
+      7
+    </div>
+  </div>
+  `;
+  target.appendChild(toolDisplay);
+}
+
 // Update DOM
 // Document setup
 document.title = projectTitle;
 document.author = projectAuthor;
 
 document.addEventListener('DOMContentLoaded', function() {
+    createCoverPage();
     createToc();
     updateProjectName();
-    createFooter();
+    createFooterContent();
+    createToolDisplay();
 }, false);

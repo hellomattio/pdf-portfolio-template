@@ -11,6 +11,7 @@ body {
   color: #ffffff;
   font-family: 'Lato', sans-serif;
   counter-reset: sectionNum;
+  padding: 2em;
 }
 
 .section {
@@ -39,15 +40,10 @@ a {
   margin-top: 50%;
   margin-left: 50%;
   transform: translate(-50%, -50%);
-
 }
 
 .cover-page__title {
-  /* margin: auto; */
   position: relative;
-  /* max-width: 80%; */
-  margin: auto;
-
 }
 
 .cover-page__image {
@@ -89,7 +85,22 @@ table, figure {
 
 }
 
+/* Number section headings */
 h1.section__heading:before {
   counter-increment: sectionNum;
   content: counter(sectionNum) ". ";
+}
+
+.grid-container {
+    border: 1px solid #fff;
+    margin-top: 1cm;
+}
+
+.grid-element {
+  background-color: deepPink;
+  padding: 20px;
+  color: #fff;
+  border: 1px solid #fff;
+  width: 20%;
+  display: inline-block;
 }
