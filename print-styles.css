@@ -52,14 +52,18 @@ table, figure {
   background: #1D2429;
 
   @bottom-left {
-    margin: 10pt 0 30pt 0;
+    margin: 10pt 0 10pt 10pt;
     border-top: .25pt solid #666;
     font-size: 9pt;
     color: #FFF;
   }
 
   @bottom-right {
-    content: "Some content!";
+    margin: 10pt 10pt 10pt 0;
+    border-top: .25pt solid #666;
+    font-size: 9pt;
+    color: #FFF;
+    content: "Page " counter(page) " of " counter(pages);
   }
 }
 
