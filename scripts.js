@@ -1,6 +1,8 @@
 // Configure document
 const projectTitle = "Cochlear Remote Assistance (iOS)";
+const projectSubtitle = "A UI design for a mobile version of Cochlear's proprietary hardware control device."
 const projectAuthor = "Matt Doyle";
+const coverImageSource = "assets/splash.jpg"
 
 // Create section class
 class Section {
@@ -77,6 +79,8 @@ createTitlePage = () => {
   const target = document.querySelector('.cover-page');
   target.innerHTML = `
     <h1 class="cover-page__title">${projectTitle}</h1>
+    <h4>${projectSubtitle}</h4>
+    <img class="cover-page__image" src=${coverImageSource}>
     `;
 }
 
