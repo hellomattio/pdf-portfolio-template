@@ -11,7 +11,7 @@ class Section {
     this.target = document.querySelector("#toc");
     this.div = document.createElement("div");
     this.div.id = this.sectionName;
-    this.div.innerHTML = `<h1 class="section__heading">${sectionTitle}</h1>`;
+    this.div.innerHTML = `<h1 id="${this.sectionName}__header" class="section__heading">${sectionTitle}</h1>`;
     this.div.className = "section";
     this.target.parentNode.insertBefore(this.div, this.target.lastSibling);
   }
@@ -99,8 +99,8 @@ createToc = () => {
   let tocList = "";
   for (heading of headings) {
     tocList ?
-      tocList = `${tocList}\n<li>${heading.innerHTML}</li>`:
-      tocList = `<li>${heading.innerHTML}</li>`;
+      tocList = `${tocList}\n<li><a href=#${heading.id}>${heading.innerHTML}</a></li>`:
+      tocList = `<li><a href=#${heading.id}>${heading.innerHTML}</a></li>`;
   }
   console.log(tocList);
   target.innerHTML = `
