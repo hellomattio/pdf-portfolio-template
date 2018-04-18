@@ -83,9 +83,12 @@ createTitlePage = () => {
 createFooter = () => {
   const css = document.createElement("style");
   css.type = "text/css";
+  console.log(projectTitle);
   css.innerHTML = `
-    @bottom-left {
-      content: "Content from JS!"
+    @page {
+      @bottom-left {
+        content: "${projectTitle}" 
+      }
     }
   `
   document.head.appendChild(css);
@@ -102,4 +105,4 @@ document.author = projectAuthor;
 //style.setProperty('--project-name', projectName);
 
 updateProjectName();
-// createFooter();
+createFooter();

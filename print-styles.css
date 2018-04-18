@@ -54,9 +54,8 @@ table, figure {
   @bottom-left {
     margin: 10pt 0 30pt 0;
     border-top: .25pt solid #666;
-    content: "My book";
     font-size: 9pt;
-    color: #333;
+    color: #FFF;
   }
 
   @bottom-right {
