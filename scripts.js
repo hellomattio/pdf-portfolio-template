@@ -74,9 +74,9 @@ updateProjectName = () => {
 }
 
 createTitlePage = () => {
-  const target = document.querySelector('#title-page');
+  const target = document.querySelector('.cover-page');
   target.innerHTML = `
-    <h1>${projectTitle}</h1>
+    <h1 class="cover-page__title">${projectTitle}</h1>
     `;
 }
 
@@ -84,8 +84,8 @@ createFooter = () => {
   const css = document.createElement("style");
   css.type = "text/css";
   css.innerHTML = `
-    h1 {
-      color: green;
+    @bottom-left {
+      content: "Content from JS!"
     }
   `
   document.head.appendChild(css);
@@ -102,4 +102,4 @@ document.author = projectAuthor;
 //style.setProperty('--project-name', projectName);
 
 updateProjectName();
-createFooter();
+// createFooter();
