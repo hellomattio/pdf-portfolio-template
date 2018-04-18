@@ -10,7 +10,7 @@ https://www.smashingmagazine.com/2015/01/designing-for-print-with-css/
 body {
   color: #ffffff;
   font-family: 'Lato', sans-serif;
-
+  counter-reset: sectionNum;
 }
 
 .section {
@@ -69,4 +69,9 @@ table, figure {
 
 @page :first {
   margin: 0cm;
+}
+
+h1.section__heading:before {
+  counter-increment: sectionNum;
+  content: counter(sectionNum) ". ";
 }

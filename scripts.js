@@ -11,7 +11,7 @@ class Section {
     this.target = document.querySelector("#toc");
     this.div = document.createElement("div");
     this.div.id = this.sectionName;
-    this.div.innerHTML = `<h1>${sectionTitle}</h1>`;
+    this.div.innerHTML = `<h1 class="section__heading">${sectionTitle}</h1>`;
     this.div.className = "section";
     this.target.parentNode.insertBefore(this.div, this.target.lastSibling);
   }
@@ -87,7 +87,7 @@ createFooter = () => {
   css.innerHTML = `
     @page {
       @bottom-left {
-        content: "${projectTitle}" 
+        content: "${projectTitle}"
       }
     }
   `
