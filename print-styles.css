@@ -37,9 +37,9 @@ a {
   page-break-after: always;
   text-align: center;
   margin: auto;
-  margin-top: 50%;
+  margin-top: 40%;
   margin-left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
 }
 
 .cover-page__title {
@@ -92,15 +92,18 @@ h1.section__heading:before {
 }
 
 .grid-container {
-    border: 1px solid #fff;
     margin-top: 1cm;
+    padding-top: 0.1em;
+    padding-bottom: 0.5em;
+    background-color: rgba(0, 0, 0, 0.1); /* Color white with alpha 0.9*/
+    border-radius: 8px;
 }
 
 .grid-element {
-  background-color: deepPink;
-  padding: 20px;
+  padding: 5px;
   color: #fff;
-  border: 1px solid #fff;
   width: 20%;
   display: inline-block;
+  font-size: 50px;
+  page-break-before: avoid;
 }
