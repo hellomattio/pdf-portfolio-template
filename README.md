@@ -24,7 +24,11 @@ A template using HTML5, CSS3 and JavaScript (ES6) to create and stylise exportab
 
 `git clone https://github.com/hellomattio/pdf-portfolio-template.git`
 
-**4. Generate sample PDF**
+**4. Install icon font**
+
+Add `devicon.ttf` to system fonts.
+
+**5. Generate sample PDF**
 
 `cd pdf-portfolio-template/`
 
