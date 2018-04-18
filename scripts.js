@@ -83,7 +83,6 @@ createTitlePage = () => {
 createFooter = () => {
   const css = document.createElement("style");
   css.type = "text/css";
-  console.log(projectTitle);
   css.innerHTML = `
     @page {
       @bottom-left {
@@ -95,14 +94,30 @@ createFooter = () => {
 }
 
 createToc = () => {
-  // TODO
+  const target = document.querySelector('#toc');
+  let headings = document.querySelectorAll(".section__heading");
+  let tocList = "";
+  for (heading of headings) {
+    tocList ?
+      tocList = `${tocList}\n<li>${heading.innerHTML}</li>`:
+      tocList = `<li>${heading.innerHTML}</li>`;
+  }
+  console.log(tocList);
+  target.innerHTML = `
+    <h2 class="project-name"></h2>
+    <ol>
+      ${tocList}
+    </ol>
+    `;
 }
 
 // Update DOM
 // Document setup
 document.title = projectTitle;
 document.author = projectAuthor;
-//style.setProperty('--project-name', projectName);
 
-updateProjectName();
-createFooter();
+document.addEventListener('DOMContentLoaded', function() {
+    createToc();
+    updateProjectName();
+    createFooter();
+}, false);
