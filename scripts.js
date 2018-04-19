@@ -103,7 +103,7 @@ createToc = () => {
   let tocList = "";
   let newLine = "";
   for (heading of headings) {
-    if (tocList) newLine = "\n";
+    if (tocList) newLine = "\n\t";
     tocList = `${tocList}${newLine}<li><a href=#${heading.id}>${heading.innerHTML}</a></li>`;
   }
   target.innerHTML = `
@@ -118,39 +118,21 @@ createToolDisplay = ([...tools]) => {
   const target = document.querySelector('.cover-page');
   const toolDisplay = document.createElement("div");
   toolDisplay.className = "tool-display";
-  toolDisplay.innerHTML = `
-  <div class="grid-container grid-container__fit">
-    <div><h4>Built on:</h4></div>
-    <div class="grid-element">
-      <i class="devicon-html5-plain-wordmark"></i>
-    </div>
-    <div class="grid-element">
-      <i class="devicon-css3-plain-wordmark"></i>
-    </div>
-    <div class="grid-element">
-      <i class="devicon-javascript-plain"></i>
-    </div>
-    <div class="grid-element">
-      <i class="devicon-sketch-line-wordmark"></i>
-    </div>
-    <div class="grid-element">
-      <i class="devicon-chrome-plain-wordmark"></i>
-    </div>
-    <div class="grid-element">
-      <i class="devicon-git-plain-wordmark"></i>
-    </div>
-    <div class="grid-element">
-      <i class="devicon-devicon-plain-wordmark"></i>
-    </div>
-  </div>
-  `;
   let gridElements = "";
   let newLine = "";
   for (tool of tools) {
-    if (gridElements) newLine = "\n";
-    gridElements = `${gridElements}${newLine}${tool}`
-    console.log(gridElements);
+    if (gridElements) newLine = "\n\t";
+    gridElements = `${gridElements}${newLine}<div class="grid-element">
+      <i class="${tool}"></i>
+    </div>`
   }
+  toolDisplay.innerHTML = `
+  <div class="grid-container grid-container__fit">
+    <div><h4>Built on:</h4></div>
+    ${gridElements}
+  </div>
+  `;
+  console.log(gridElements);
   target.appendChild(toolDisplay);
 }
 
@@ -164,5 +146,4 @@ document.addEventListener('DOMContentLoaded', function() {
     createToc();
     updateProjectName();
     createFooterContent();
-    createToolDisplay(['html5', 'css3', 'javascript']);
 }, false);

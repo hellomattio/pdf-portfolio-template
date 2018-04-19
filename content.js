@@ -1,3 +1,19 @@
+document.addEventListener('DOMContentLoaded', function() {
+    createToolDisplay([
+      // Add tools used below (refer to http://konpa.github.io/devicon/ for icon stringd). e.g:
+      // 'devicon-html5-plain-wordmark',
+      // 'devicon-css3-plain-wordmark',
+      // 'devicon-javascript-plain'
+      'devicon-html5-plain-wordmark',
+      'devicon-css3-plain-wordmark',
+      'devicon-javascript-plain',
+      'devicon-chrome-plain-wordmark',
+      'devicon-atom-original',
+      'devicon-github-plain-wordmark',
+      'devicon-sketch-line-wordmark'
+    ]);
+}, false);
+
 // Add content below:
 
 const introduction = new Section("Introduction");
