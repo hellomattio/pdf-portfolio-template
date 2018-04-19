@@ -18,13 +18,16 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 // Add content below:
-  // For example, to create a new section:
-    // const introduction = new Section("Introduction");
-  // For example, to add a paragraph to your new section:
-    // introduction.addParagraph("This is another paragraph in the introduction.");
+// -----------------------------------------------------------------------------
+//   FTo create a new section:
+//    const <sectionName> = new Section("<section title>");
+//   To add a paragraph to your new section:
+//    <sectionName>.addParagraph("<paragraph content>");
+// -----------------------------------------------------------------------------
+
 const introduction = new Section("Introduction");
-introduction.addParagraph("My nephew, Henry, was born with severe hearing loss. His hearing ability was limited to 110 dB, the magnitude of which would cause others hearing damage. It was declared he would need hearing aids for the rest of his life. Even then, this would only get him to around 50-60 dB. Still not enough to hear or distinguish speech.");
-introduction.addParagraph("This is another paragraph in the introduction.");
+introduction.addParagraph("Developers require a way to showcase their projects and ideas to others. The utility, solution, and beauty, within a piece of software can be lost if not effectively communicated.");
+introduction.addParagraph("This tool seeks to allow developers to showcase their work in a standardised format, so that they can focus on what they love - producing great software.");
 
 const approach = new Section("Approach");
 approach.addParagraph("test paragraph 2");
