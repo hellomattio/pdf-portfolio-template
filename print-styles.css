@@ -97,6 +97,11 @@ h1.section__heading:before {
     padding-bottom: 0.5em;
     background-color: rgba(0, 0, 0, 0.1); /* Color white with alpha 0.9*/
     border-radius: 8px;
+    /* background:
+      radial-gradient(
+        yellow,
+        #f06d06
+    ); */
 }
 
 .grid-element {
