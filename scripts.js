@@ -1,8 +1,8 @@
 // Configure document
-const projectTitle = "Cochlear Remote Assistance (iOS)";
-const projectSubtitle = "A UI design for a mobile version of Cochlear's proprietary hardware control device."
+const projectTitle = "Software Project PDF Generator";
+const projectSubtitle = "A JavaScript tool to generate beautiful PDF documents for your projects.";
 const projectAuthor = "Matt Doyle";
-const coverImageSource = "assets/splash.jpg"
+const coverImageSource = "assets/splash.jpg";
 
 // Create section class
 class Section {
@@ -91,6 +91,9 @@ createFooterContent = () => {
     @page {
       @bottom-left {
         content: "${projectTitle}"
+      }
+      @bottom-center {
+        content: "${projectAuthor}"
       }
     }
   `
