@@ -101,12 +101,11 @@ createToc = () => {
   const target = document.querySelector('#toc');
   let headings = document.querySelectorAll(".section__heading");
   let tocList = "";
+  let newLine = "";
   for (heading of headings) {
-    tocList ?
-      tocList = `${tocList}\n<li><a href=#${heading.id}>${heading.innerHTML}</a></li>`:
-      tocList = `<li><a href=#${heading.id}>${heading.innerHTML}</a></li>`;
+    if (tocList) newLine = "\n";
+    tocList = `${tocList}${newLine}<li><a href=#${heading.id}>${heading.innerHTML}</a></li>`;
   }
-  console.log(tocList);
   target.innerHTML = `
     <h2 class="project-name"></h2>
     <ol>
@@ -115,36 +114,43 @@ createToc = () => {
     `;
 }
 
-createToolDisplay = () => {
+createToolDisplay = ([...tools]) => {
   const target = document.querySelector('.cover-page');
   const toolDisplay = document.createElement("div");
   toolDisplay.className = "tool-display";
   toolDisplay.innerHTML = `
   <div class="grid-container grid-container__fit">
-    <div><p>Built on:</p></div>
+    <div><h4>Built on:</h4></div>
     <div class="grid-element">
-      <img src="tools/css3-plain-wordmark.svg">
+      <i class="devicon-html5-plain-wordmark"></i>
     </div>
     <div class="grid-element">
       <i class="devicon-css3-plain-wordmark"></i>
     </div>
     <div class="grid-element">
-      3
+      <i class="devicon-javascript-plain"></i>
     </div>
     <div class="grid-element">
-      4
+      <i class="devicon-sketch-line-wordmark"></i>
     </div>
     <div class="grid-element">
-      5
+      <i class="devicon-chrome-plain-wordmark"></i>
     </div>
     <div class="grid-element">
-      6
+      <i class="devicon-git-plain-wordmark"></i>
     </div>
     <div class="grid-element">
-      7
+      <i class="devicon-devicon-plain-wordmark"></i>
     </div>
   </div>
   `;
+  let gridElements = "";
+  let newLine = "";
+  for (tool of tools) {
+    if (gridElements) newLine = "\n";
+    gridElements = `${gridElements}${newLine}${tool}`
+    console.log(gridElements);
+  }
   target.appendChild(toolDisplay);
 }
 
@@ -158,5 +164,5 @@ document.addEventListener('DOMContentLoaded', function() {
     createToc();
     updateProjectName();
     createFooterContent();
-    createToolDisplay();
+    createToolDisplay(['html5', 'css3', 'javascript']);
 }, false);
