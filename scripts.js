@@ -121,9 +121,15 @@ createToolDisplay = ([...tools]) => {
   let gridElements = "";
   let newLine = "";
   for (tool of tools) {
+    let iconHtml = "";
     if (gridElements) newLine = "\n\t";
+    if (tool.startsWith("devicon")) {
+      iconHtml = `<i class=${tool}></i>`;
+    } else {
+      iconHtml = `<img class="tool-image" src="${tool}">`;
+    }
     gridElements = `${gridElements}${newLine}<div class="grid-element">
-      <i class="${tool}"></i>
+      ${iconHtml}
     </div>`
   }
   toolDisplay.innerHTML = `

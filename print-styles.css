@@ -112,3 +112,8 @@ h1.section__heading:before {
   font-size: 50px;
   page-break-before: avoid;
 }
+
+.tool-image {
+  max-width: 100%;
+  max-weight: 100%;
+}
