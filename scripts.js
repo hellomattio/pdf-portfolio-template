@@ -38,11 +38,11 @@ class Section {
     // TODO
   }
 
-  addCodeBlock (codeToRender) {
+  addCodeBlock (language, codeToRender) {
     const target = document.querySelector(`#${this.sectionName}`);
     const preformattedBlock = document.createElement("pre");
     const codeBlock = document.createElement("code");
-    preformattedBlock.className = "section__code-block";
+    preformattedBlock.className = `language-${language}`;
     codeBlock.innerHTML = (() => {
       return codeToRender
         .replace(/&/g, "&amp;")

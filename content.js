@@ -1,11 +1,13 @@
+// -----------------------------------------------------------------------------
+// Add tools used below (refer to http://konpa.github.io/devicon/ for icon strings). e.g:
+//  'devicon-html5-plain-wordmark',
+//  'devicon-css3-plain-wordmark',
+//  'devicon-javascript-plain'
+// Or enter the url of the logo, e.g.:
+//  'tools/logo.svg'
+// -----------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function() {
     createToolDisplay([
-      // Add tools used below (refer to http://konpa.github.io/devicon/ for icon strings). e.g:
-        // 'devicon-html5-plain-wordmark',
-        // 'devicon-css3-plain-wordmark',
-        // 'devicon-javascript-plain'
-      // Or enter the url of the logo, e.g.:
-        // 'tools/logo.svg'
       'devicon-html5-plain-wordmark',
       'devicon-css3-plain-wordmark',
       'devicon-javascript-plain',
@@ -32,3 +34,8 @@ introduction.addParagraph("This tool seeks to allow developers to showcase their
 const approach = new Section("Approach");
 approach.addParagraph("test paragraph 2");
 approach.addImage("assets/1.jpg");
+approach.addCodeBlock("html", `
+  some text <p> hey there</p>
+  another line of <strong>text</strong
+  `
+);
