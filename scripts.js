@@ -29,6 +29,7 @@ class Section {
   addImage (source, style = "default", size = "medium") {
     const target = document.querySelector(`#${this.sectionName}`);
     const newImage = document.createElement("img");
+    newImage.className = "section__image";
     newImage.src = source;
     target.appendChild(newImage);
   }
@@ -38,7 +39,18 @@ class Section {
   }
 
   addCodeBlock (codeBlock) {
-    // TODO
+    const target = document.querySelector(`#${this.sectionName}`);
+    const newCodeBlock = document.createElement("pre");
+    newCodeBlock.className = "section__code-block";
+    newCodeBlock.innerHTML = (() => {
+      return codeBlock
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    })(codeBlock);
+    target.appendChild(newCodeBlock);
   }
 
   addOrderedList ([listItem]) {
@@ -46,10 +58,6 @@ class Section {
   }
 
   addUnorderedList ([listItem]) {
-    // TODO
-  }
-
-  addTool ([tool]) {
     // TODO
   }
 
@@ -62,7 +70,7 @@ class Section {
   }
 
   addUserStory([userStory]) {
-    // TODO
+    // TODO - [(User, story)]
   }
 
 }
@@ -141,7 +149,6 @@ createToolDisplay = ([...tools]) => {
     ${gridElements}
   </div>
   `;
-  console.log(gridElements);
   target.appendChild(toolDisplay);
 }
 
