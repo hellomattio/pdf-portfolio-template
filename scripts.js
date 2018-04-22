@@ -38,19 +38,21 @@ class Section {
     // TODO
   }
 
-  addCodeBlock (codeBlock) {
+  addCodeBlock (codeToRender) {
     const target = document.querySelector(`#${this.sectionName}`);
-    const newCodeBlock = document.createElement("pre");
-    newCodeBlock.className = "section__code-block";
-    newCodeBlock.innerHTML = (() => {
-      return codeBlock
+    const preformattedBlock = document.createElement("pre");
+    const codeBlock = document.createElement("code");
+    preformattedBlock.className = "section__code-block";
+    codeBlock.innerHTML = (() => {
+      return codeToRender
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
-    })(codeBlock);
-    target.appendChild(newCodeBlock);
+    })(codeToRender);
+    preformattedBlock.appendChild(codeBlock);
+    target.appendChild(preformattedBlock);
   }
 
   addOrderedList ([listItem]) {
