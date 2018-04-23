@@ -130,3 +130,8 @@ h1.section__heading:before {
   display: block;
   background-color: #fff;
 }
+
+.section__image {
+  width: 100%;
+  max-height: 100%;
+}
