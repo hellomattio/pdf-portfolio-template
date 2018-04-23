@@ -39,3 +39,5 @@ approach.addCodeBlock("html", `
   another line of <strong>text</strong
   `
 );
+approach.addOrderedList("Item one", "Item two", "Item 3");
+approach.addUnorderedList("Item one", "Item two", "Item 3");

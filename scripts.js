@@ -59,12 +59,32 @@ class Section {
     target.appendChild(preformattedBlock);
   }
 
-  addOrderedList ([listItem]) {
-    // TODO
+  addOrderedList (...listItems) {
+    const target = document.querySelector(`#${this.sectionName}`);
+    const orderedList = document.createElement("ol");
+    const listElements = (() => {
+      let listElementHtml ="";
+      for (let listItem of listItems) {
+        listElementHtml += `<li>${listItem}</li>\n`;
+      }
+      return listElementHtml;
+    })()
+    orderedList.innerHTML = listElements;
+    target.appendChild(orderedList);
   }
 
-  addUnorderedList ([listItem]) {
-    // TODO
+  addUnorderedList (...listItems) {
+    const target = document.querySelector(`#${this.sectionName}`);
+    const unorderedList = document.createElement("ul");
+    const listElements = (() => {
+      let listElementHtml ="";
+      for (let listItem of listItems) {
+        listElementHtml += `<li>${listItem}</li>\n`;
+      }
+      return listElementHtml;
+    })()
+    unorderedList.innerHTML = listElements;
+    target.appendChild(unorderedList);
   }
 
   addColorPallet ([color]) {
@@ -84,7 +104,7 @@ class Section {
 // Define functions
 updateProjectName = () => {
   elements = document.getElementsByClassName('project-name');
-  for (element of elements) {
+  for (let element of elements) {
     element.innerHTML = projectTitle;
   }
 }
