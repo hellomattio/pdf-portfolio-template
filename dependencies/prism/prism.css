@@ -7,7 +7,8 @@ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascr
  */
 
 code[class*="language-"],
-pre[class*="language-"] {
+pre[class*="language-"],
+code {
 	color: black;
 	background: none;
 	text-shadow: 0 1px white;
@@ -43,25 +44,26 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 
 @media print {
 	code[class*="language-"],
-	pre[class*="language-"] {
+	pre[class*="language-"], code {
 		text-shadow: none;
 	}
 }
 
 /* Code blocks */
-pre[class*="language-"] {
+pre[class*="language-"], code {
 	padding: 1em;
 	margin: .5em 0;
 	overflow: auto;
 }
 
 :not(pre) > code[class*="language-"],
-pre[class*="language-"] {
+pre[class*="language-"],
+code {
 	background: #f5f2f0;
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+:not(pre) > code[class*="language-"], code {
 	padding: .1em;
 	border-radius: .3em;
 	white-space: normal;
