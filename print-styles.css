@@ -125,3 +125,8 @@ h1.section__heading:before {
   max-width: 100%;
   max-weight: 100%;
 }
+
+.code-language-title {
+  display: block;
+  background-color: #fff;
+}

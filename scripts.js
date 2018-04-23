@@ -42,7 +42,9 @@ class Section {
     const target = document.querySelector(`#${this.sectionName}`);
     const preformattedBlock = document.createElement("pre");
     const codeBlock = document.createElement("code");
+    const languageTitle = document.createElement("span");
     preformattedBlock.className = `language-${language}`;
+    languageTitle.className = "code-language-title";
     codeBlock.innerHTML = (() => {
       return codeToRender
         .replace(/&/g, "&amp;")
@@ -51,6 +53,8 @@ class Section {
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
     })(codeToRender);
+    languageTitle.innerHTML = `<strong> ${language}</strong>`
+    preformattedBlock.appendChild(languageTitle);
     preformattedBlock.appendChild(codeBlock);
     target.appendChild(preformattedBlock);
   }
