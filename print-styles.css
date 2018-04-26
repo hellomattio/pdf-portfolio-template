@@ -151,20 +151,9 @@ h1.section__heading:before {
   display: table-cell;
 }
 
-.pallete-wrapper__item:first-child {
-  border-radius: 8px 0 0 8px;
-}
-
-.pallete-wrapper__item:last-child {
-  border-radius: 0 8px 8px 0;
-}
-
-.pallete-wrapper__item:only-child {
-  border-radius: 8px 0 0 0;
-}
-
-.invertible-text {
-  mix-blend-mode: difference;
-  filter: contrast(0);
-  background-clip: text;
+p.pallete-wrapper__item {
+  color: black;
+  text-align: center;
+  display: block;
+  font-weight: bold;
 }

@@ -89,21 +89,27 @@ class Section {
     palleteWrapper.className = "pallete-wrapper grid-container";
     let colorElementHtml = "";
     for (let colorHex of colorHexList) {
+      let palleteContainer = document.createElement("div");
       let palleteItem = document.createElement("div");
-      palleteItem.className = "pallete-wrapper__item grid-container__element"
+      let palleteText = document.createElement("p");
+      palleteContainer.className = "pallete-wrapper__item grid-container__element"
       palleteItem.style.backgroundColor = colorHex;
-      palleteItem.innerHTML = `<p class="invertible-text">${colorHex}</p>`
-      palleteWrapper.appendChild(palleteItem);
+      palleteItem.innerHTML = `<br><br><br>`
+      palleteText.className = "pallete-wrapper__item";
+      palleteText.innerHTML = `${colorHex}`;
+      palleteContainer.appendChild(palleteItem);
+      palleteContainer.appendChild(palleteText);
+      palleteWrapper.appendChild(palleteContainer);
     }
     target.appendChild(palleteWrapper);
   }
 
-  addTypeFace(typeface) {
-    // TODO
+  addUserStory ([userStory]) {
+    // TODO - [(User, story)]
   }
 
-  addUserStory([userStory]) {
-    // TODO - [(User, story)]
+  addH2Header () {
+
   }
 
 }
