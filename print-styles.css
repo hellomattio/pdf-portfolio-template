@@ -111,7 +111,6 @@ h1.section__heading:before {
 
 .grid-container__element {
   padding: 5px;
-  width: 20%;
   display: inline-block;
   page-break-before: avoid;
   margin: auto;
@@ -119,6 +118,7 @@ h1.section__heading:before {
 
 .icon {
   font-size: 50px;
+  width: 20%;
 }
 
 .tool-image {
@@ -139,9 +139,32 @@ h1.section__heading:before {
 
 .pallete-wrapper {
   background-color: #F5F2F0;
+  overflow: hidden;
+  /* margin: auto; */
+  display: table;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .pallete-wrapper__item {
-  display: flex;
-  width: 100%;
+  text-align: center;
+  display: table-cell;
+}
+
+.pallete-wrapper__item:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.pallete-wrapper__item:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.pallete-wrapper__item:only-child {
+  border-radius: 8px 0 0 0;
+}
+
+.invertible-text {
+  mix-blend-mode: difference;
+  filter: contrast(0);
+  background-clip: text;
 }

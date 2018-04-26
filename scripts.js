@@ -34,7 +34,7 @@ class Section {
     target.appendChild(newImage);
   }
 
-  addImageGrid ([source], percentMaxHeight) {
+  addImageGrid ([...source], percentMaxHeight) {
     // TODO
   }
 
@@ -62,33 +62,40 @@ class Section {
   addOrderedList (...listItems) {
     const target = document.querySelector(`#${this.sectionName}`);
     const orderedList = document.createElement("ol");
-    const listElements = (() => {
-      let listElementHtml ="";
-      for (let listItem of listItems) {
-        listElementHtml += `<li>${listItem}</li>\n`;
-      }
-      return listElementHtml;
-    })()
-    orderedList.innerHTML = listElements;
+    let listElementHtml = "";
+    for (let listItem of listItems) {
+      let listElement = document.createElement("li")
+      listElement.innerHTML = `${listItem}`;
+      orderedList.appendChild(listElement);
+    }
     target.appendChild(orderedList);
   }
 
   addUnorderedList (...listItems) {
     const target = document.querySelector(`#${this.sectionName}`);
     const unorderedList = document.createElement("ul");
-    const listElements = (() => {
-      let listElementHtml ="";
-      for (let listItem of listItems) {
-        listElementHtml += `<li>${listItem}</li>\n`;
-      }
-      return listElementHtml;
-    })()
-    unorderedList.innerHTML = listElements;
+    let listElementHtml = "";
+    for (let listItem of listItems) {
+      let listElement = document.createElement("li")
+      listElement.innerHTML = `${listItem}`;
+      unorderedList.appendChild(listElement);
+    }
     target.appendChild(unorderedList);
   }
 
-  addColorPallet ([color]) {
-    // TODO
+  addColorPallete (...colorHexList) {
+    const target = document.querySelector(`#${this.sectionName}`);
+    const palleteWrapper = document.createElement("div");
+    palleteWrapper.className = "pallete-wrapper grid-container";
+    let colorElementHtml = "";
+    for (let colorHex of colorHexList) {
+      let palleteItem = document.createElement("div");
+      palleteItem.className = "pallete-wrapper__item grid-container__element"
+      palleteItem.style.backgroundColor = colorHex;
+      palleteItem.innerHTML = `<p class="invertible-text">${colorHex}</p>`
+      palleteWrapper.appendChild(palleteItem);
+    }
+    target.appendChild(palleteWrapper);
   }
 
   addTypeFace(typeface) {
@@ -165,12 +172,12 @@ createToolDisplay = ([...tools]) => {
     } else {
       iconHtml = `<img class="tool-image" src="${tool}">`;
     }
-    gridElements = `${gridElements}${newLine}<div class="grid-element">
+    gridElements = `${gridElements}${newLine}<div class="grid-container__element icon">
       ${iconHtml}
     </div>`
   }
   toolDisplay.innerHTML = `
-  <div class="grid-container grid-container__fit">
+  <div class="grid-container">
     <div><h4>Built on:</h4></div>
     ${gridElements}
   </div>

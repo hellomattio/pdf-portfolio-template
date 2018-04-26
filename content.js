@@ -41,3 +41,4 @@ approach.addCodeBlock("html", `
 );
 approach.addOrderedList("Item one", "Item two", "Item 3");
 approach.addUnorderedList("Item one", "Item two", "Item 3");
+approach.addColorPallete("#75D2E3", "#ABDBDB", "#ED874A", "#F46A35");
