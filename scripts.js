@@ -2,6 +2,8 @@
 const projectTitle = "Software Project PDF Generator";
 const projectSubtitle = "A JavaScript tool to generate beautiful PDF documents for your projects.";
 const projectAuthor = "Matt Doyle";
+const authorPhone = "0407 417 405"
+const authorEmail = "hello@matt.fyi"
 const coverImageSource = "assets/splash.jpg";
 
 // Create section class
@@ -214,9 +216,10 @@ createNameCard = () => {
   const nameCard = document.createElement("div");
   nameCard.className = "name-card__container";
   nameCard.innerHTML =`<p class="name-card__text">
-    ${projectAuthor}<br>
-    0407 417 405<br>
-    hello@matt.fyi<br>
+    <strong>${projectAuthor}</strong><br>
+    <br>
+    <strong>M:</strong> ${authorPhone}<br>
+    <strong>E:</strong> ${authorEmail}<br>
     </p>`;
   target.appendChild(nameCard);
 }
