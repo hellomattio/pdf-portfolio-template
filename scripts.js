@@ -116,7 +116,8 @@ class Section {
       let palleteText = document.createElement("p");
       palleteContainer.className = "pallete-wrapper__item grid-container__element"
       palleteItem.style.backgroundColor = colorHex;
-      palleteItem.innerHTML = `<br><br><br>`
+      palleteItem.className = "pallete-wrapper__color";
+      palleteItem.innerHTML = `<br><br><br>`;
       palleteText.className = "pallete-wrapper__item";
       palleteText.innerHTML = `${colorHex}`;
       palleteContainer.appendChild(palleteItem);

@@ -141,7 +141,6 @@ h1.section__heading:before {
 .pallete-wrapper {
   background-color: #F5F2F0;
   overflow: hidden;
-  /* margin: auto; */
   display: table;
   width: 100%;
   border-radius: 8px;
@@ -152,11 +151,20 @@ h1.section__heading:before {
   display: table-cell;
 }
 
+.pallete-wrapper__color {
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+  border-radius: 8px;
+}
+
 p.pallete-wrapper__item {
   color: black;
   text-align: center;
   display: block;
-  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  /* font-weight: bold; */
 }
 
 .image-grid {
@@ -201,7 +209,6 @@ figcaption {
   margin-left: 50%;
   transform: translate(-50%, -80%);
   page: last_page;
-  box-shadow: 0 0 20px #000;
 }
 
 .name-card__text {
