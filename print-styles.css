@@ -90,7 +90,11 @@ table, figure {
 @page :first {
   margin: 0cm;
   background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+}
 
+@page last_page {
+  margin: 0cm;
+  background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
 }
 
 /* Number section headings */
@@ -100,7 +104,7 @@ h1.section__heading:before {
 }
 
 .grid-container {
-    background-color: rgba(0, 0, 0, 0.1); /* Color white with alpha 0.9*/
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin: auto;
 
@@ -182,4 +186,24 @@ p.pallete-wrapper__item {
 figcaption {
   color: black;
   font-style: italic;
+}
+
+.name-card__container {
+  height: 200px;
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0.1);
+  break-before: always;
+  border-radius: 8px;
+  text-align: center;
+  display: table;
+  margin-top: 60%;
+  margin-left: 50%;
+  transform: translate(-50%, -60%);
+  page: last_page;
+}
+
+.name-card__text {
+  vertical-align: middle;
+  display: table-cell;
+  transform: translate(0%, 65%);
 }

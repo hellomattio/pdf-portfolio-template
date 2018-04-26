@@ -209,6 +209,18 @@ createToolDisplay = ([...tools]) => {
   target.appendChild(toolDisplay);
 }
 
+createNameCard = () => {
+  const target = document.getElementsByTagName("body")[0];
+  const nameCard = document.createElement("div");
+  nameCard.className = "name-card__container";
+  nameCard.innerHTML =`<p class="name-card__text">
+    ${projectAuthor}<br>
+    0407 417 405<br>
+    hello@matt.fyi<br>
+    </p>`;
+  target.appendChild(nameCard);
+}
+
 // Update DOM
 // Document setup
 document.title = projectTitle;
@@ -219,4 +231,5 @@ document.addEventListener('DOMContentLoaded', function() {
     createToc();
     updateProjectName();
     createFooterContent();
+    createNameCard();
 }, false);
