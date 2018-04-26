@@ -34,8 +34,28 @@ class Section {
     target.appendChild(newImage);
   }
 
-  addImageGrid ([...source], percentMaxHeight) {
-    // TODO
+  addImageGrid ([...[...sources]]) {
+      const target = document.querySelector(`#${this.sectionName}`);
+      const imageContainer = document.createElement("div");
+      let gridElements = "";
+      let newLine = "";
+      for (let source of sources) {
+        let imageHtml = "";
+        let caption = "";
+        source[1] ? caption = source[1] : caption = "<br>";
+        if (gridElements) newLine = "\n\t";
+        imageHtml = `<img class="image-grid__image" src="${source[0]}">`;
+        gridElements = `${gridElements}${newLine}<div class="image-grid__container">
+          ${imageHtml}
+          <figcaption>${caption}</figcaption>
+        </div>`
+      }
+      imageContainer.innerHTML = `
+      <div class="image-grid">
+        ${gridElements}
+      </div>
+      `;
+      target.appendChild(imageContainer);
   }
 
   addCodeBlock (language, codeToRender) {

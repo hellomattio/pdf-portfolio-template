@@ -37,9 +37,14 @@ approach.addParagraph("test paragraph 2");
 approach.addImage("assets/1.jpg");
 approach.addCodeBlock("html", `
   some text <p> hey there</p>
-  another line of <strong>text</strong
+  another line of <strong>text</strong>
   `
 );
 approach.addOrderedList("Item one", "Item two", "Item 3");
 approach.addUnorderedList("Item one", "Item two", "Item 3");
 approach.addColorPallete("#75D2E3", "#ABDBDB", "#ED874A", "#F46A35");
+approach.addImageGrid([
+  ['assets/1.jpg', 'Caption 1'],
+  ['assets/2.jpeg'],
+  ['assets/3.png'],
+]);
