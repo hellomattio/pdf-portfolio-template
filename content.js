@@ -32,6 +32,7 @@ introduction.addParagraph("Developers require a way to showcase their projects a
 introduction.addParagraph("This tool seeks to allow developers to showcase their work in a standardised format, so that they can focus on what they love - producing great software.");
 
 const approach = new Section("Approach");
+approach.addH2Header("This is a h2 header!");
 approach.addParagraph("test paragraph 2");
 approach.addImage("assets/1.jpg");
 approach.addCodeBlock("html", `

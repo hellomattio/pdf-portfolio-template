@@ -108,8 +108,11 @@ class Section {
     // TODO - [(User, story)]
   }
 
-  addH2Header () {
-
+  addH2Header (header) {
+    const target = document.querySelector(`#${this.sectionName}`);
+    const h2Header = document.createElement("h2");
+    h2Header.innerHTML = header;
+    target.appendChild(h2Header);
   }
 
 }
