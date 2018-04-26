@@ -130,6 +130,7 @@ class Section {
   addH2Header (header) {
     const target = document.querySelector(`#${this.sectionName}`);
     const h2Header = document.createElement("h2");
+    h2Header.className = "section__heading";
     h2Header.innerHTML = header;
     target.appendChild(h2Header);
   }
@@ -175,7 +176,14 @@ createToc = () => {
   let newLine = "";
   for (heading of headings) {
     if (tocList) newLine = "\n\t";
-    tocList = `${tocList}${newLine}<li><a href=#${heading.id}>${heading.innerHTML}</a></li>`;
+    if (heading.tagName == "H1") {
+      tocList = `${tocList}${newLine}<li class="toc-item"><a href=#${heading.id}>${heading.innerHTML}</a></li>`;
+    } else {
+      tocList = `${tocList}${newLine}<ul class="toc-nested-list">`;
+      tocList = `${tocList}${newLine}<li class="toc-nested-list__item toc-item">${heading.innerHTML}</li>`;
+      tocList = `${tocList}${newLine}</ul>`;
+    }
+
   }
   target.innerHTML = `
     <h2 class="project-name"></h2>

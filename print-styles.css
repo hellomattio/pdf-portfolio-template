@@ -107,7 +107,7 @@ h1.section__heading:before {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin: auto;
-
+    padding: 2px;
 }
 
 .grid-container__element {
@@ -164,7 +164,6 @@ p.pallete-wrapper__item {
   display: block;
   text-transform: uppercase;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  /* font-weight: bold; */
 }
 
 .image-grid {
@@ -216,4 +215,14 @@ figcaption {
   display: table-cell;
   transform: translate(0%, 45%);
   color: black;
+}
+
+.toc-nested-list {
+  margin: 0;
+  padding-left: 20px;
+  /* list-style-type: none; */
+}
+
+.toc-item {
+  line-height: 1.7;
 }
