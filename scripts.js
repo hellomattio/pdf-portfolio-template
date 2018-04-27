@@ -28,12 +28,16 @@ class Section {
     target.appendChild(newParagraph);
   }
 
-  addImage (source, style = "default", size = "medium") {
+  addImage (source, caption) {
     const target = document.querySelector(`#${this.sectionName}`);
     const newImage = document.createElement("img");
+    const newCaption = document.createElement("figcaption");
     newImage.className = "section__image";
     newImage.src = source;
+    newCaption.innerHTML = caption;
+    newCaption.className = "image-caption";
     target.appendChild(newImage);
+    target.appendChild(newCaption);
   }
 
   addImageGrid ([...[...sources]]) {

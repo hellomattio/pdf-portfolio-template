@@ -61,7 +61,7 @@ table, figure {
   size: A4 portrait;
   margin-left: 0.5cm;
   margin-right: 0.5cm;
-  background: #1D2429;
+  background: #282C33;
 
   @bottom-left {
     margin: 10pt 0 10pt 10pt;
@@ -225,4 +225,9 @@ figcaption {
 
 .toc-item {
   line-height: 1.7;
+}
+
+.image-caption {
+  text-align: center;
+  color: #F4F4F4;
 }
