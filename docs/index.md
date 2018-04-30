@@ -1,6 +1,12 @@
-## Running sample files
+## Documentation
 
-## Usage
+### Using sample files
+1. `cd path/pdf-portfolio-template/sample`
+2. Execute `sample-run.sh` bash script
+3. The PDF will be generated and saved in the `../output` folder as `sample-output.pdf`
+
+`sample-run.sh` uses the pre-populated `sample_config.js` and `sample_content.js` files in the `/sample` directory to generate a sample PDF file.
+
 ### Configure document metadata
 Open `config.js` and enter values for:
 
@@ -158,4 +164,4 @@ sectionName.addParagraph("This paragraph contains <code>inline code</code>");
 2. Update `content.js`
 3. `cd path/pdf-portfolio-template`
 3. Execute `run.sh` bash script
-4. The PDF will be generated and saved in the `/output` folder as `output.pdf`.
+4. The PDF will be generated and saved in the `/output` folder as `output.pdf`
