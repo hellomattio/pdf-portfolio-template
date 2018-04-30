@@ -101,26 +101,26 @@ class Section {
     target.appendChild(unorderedList);
   }
 
-  addColorPallete (...colorHexList) {
+  addColorPalette (...colorHexList) {
     const target = document.querySelector(`#${this.sectionName}`);
-    const palleteWrapper = document.createElement("div");
-    palleteWrapper.className = "pallete-wrapper grid-container";
+    const paletteWrapper = document.createElement("div");
+    paletteWrapper.className = "palette-wrapper grid-container";
     let colorElementHtml = "";
     for (let colorHex of colorHexList) {
-      let palleteContainer = document.createElement("div");
-      let palleteItem = document.createElement("div");
-      let palleteText = document.createElement("p");
-      palleteContainer.className = "pallete-wrapper__item grid-container__element"
-      palleteItem.style.backgroundColor = colorHex;
-      palleteItem.className = "pallete-wrapper__color";
-      palleteItem.innerHTML = `<br><br><br>`;
-      palleteText.className = "pallete-wrapper__item";
-      palleteText.innerHTML = `${colorHex}`;
-      palleteContainer.appendChild(palleteItem);
-      palleteContainer.appendChild(palleteText);
-      palleteWrapper.appendChild(palleteContainer);
+      let paletteContainer = document.createElement("div");
+      let paletteItem = document.createElement("div");
+      let paletteText = document.createElement("p");
+      paletteContainer.className = "palette-wrapper__item grid-container__element"
+      paletteItem.style.backgroundColor = colorHex;
+      paletteItem.className = "palette-wrapper__color";
+      paletteItem.innerHTML = `<br><br><br>`;
+      paletteText.className = "palette-wrapper__item";
+      paletteText.innerHTML = `${colorHex}`;
+      paletteContainer.appendChild(paletteItem);
+      paletteContainer.appendChild(paletteText);
+      paletteWrapper.appendChild(paletteContainer);
     }
-    target.appendChild(palleteWrapper);
+    target.appendChild(paletteWrapper);
   }
 
   addH2Header (header) {

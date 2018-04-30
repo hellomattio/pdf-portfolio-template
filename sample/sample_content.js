@@ -32,11 +32,11 @@ introduction.addParagraph("This tool was created to enable developers to showcas
 introduction.addParagraph("This very document was created using the tool, and is intended to act as an example of the tool's funtionality.");
 introduction.addParagraph("<strong>Body colors</strong>");
 introduction.addParagraph("The colors used throughout the body of the PDF are simple and high contrasting in order to keep attention focused on what matters most - the content.");
-introduction.addColorPallete("#282C33", "#ffffff", "#F4F4F4", "#F5F2F0");
+introduction.addColorPalette("#282C33", "#ffffff", "#F4F4F4", "#F5F2F0");
 introduction.addParagraph("Yup, pretty simple - just shades of white and black!");
 introduction.addParagraph("<strong><em>Title page</em> and <em>final page</em> colors</strong>");
 introduction.addParagraph("The <em>title page</em> and the <em>final page</em> were given a little more color in order to catch the eye.");
-introduction.addColorPallete("#f77062", "#fe5196");
+introduction.addColorPalette("#f77062", "#fe5196");
 
 const approach = new Section("Approach");
 approach.addH2Header("Key tools");
@@ -70,7 +70,7 @@ usage.addOrderedList(
   "addOrderedList()",
   "addUnorderedList",
   "addCodeBlock()",
-  "addColorPallete()"
+  "addColorPalette()"
 )
 usage.addParagraph("The image grid is useful to show multiple, related images at once, for example:");
 usage.addImageGrid([

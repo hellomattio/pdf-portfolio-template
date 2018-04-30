@@ -136,26 +136,26 @@ h1.section__heading:before {
   max-height: 100%;
 }
 
-.pallete-wrapper {
+.palette-wrapper {
   background-color: #F5F2F0;
   overflow: hidden;
   display: table;
   width: 100%;
 }
 
-.pallete-wrapper__item {
+.palette-wrapper__item {
   text-align: center;
   display: table-cell;
 }
 
-.pallete-wrapper__color {
+.palette-wrapper__color {
   border-style: solid;
   border-width: thin;
   border-color: black;
   border-radius: 8px;
 }
 
-p.pallete-wrapper__item {
+p.palette-wrapper__item {
   color: black;
   text-align: center;
   display: block;
