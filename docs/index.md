@@ -17,18 +17,21 @@ Save the file before closing.
 #### Tool Display
 Open `content.js` and add the tools used to create your project inside the `createToolDisplay()` function.
 
-{{ "{% highlight javascript " }}%}  
+{% highlight javascript %}
 /* Create a list of tools used */
 createToolDisplay([
   'devicon-html5-plain-wordmark',
   'devicon-css3-plain-wordmark',
   'devicon-javascript-plain'
 ]);
-{{ "{% endhighlight " }}%}
-
-{% highlight javascript %}
-/* Some pointless Javascript */
-var rawr = ["r", "a", "w", "r"];
 {% endhighlight %}
+
+```javascript
+createToolDisplay([
+  'devicon-html5-plain-wordmark',
+  'devicon-css3-plain-wordmark',
+  'devicon-javascript-plain'
+]);
+```
 
 ### Generate PDF
