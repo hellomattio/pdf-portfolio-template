@@ -30,16 +30,10 @@ Add `devicon.ttf` to system fonts.
 
 **5. Generate sample PDF**
 
-`cd pdf-portfolio-template/`
+`cd pdf-portfolio-template/sample`
 
-`bash run.sh`
-
-`open output_sample.pdf`
-
-## How to use
-
-TODO
+`bash sample_run.sh`
 
 ## Documentation
 
-TODO
+https://hellomattio.github.io/pdf-portfolio-template/

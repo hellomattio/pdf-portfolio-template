@@ -156,5 +156,6 @@ sectionName.addParagraph("This paragraph contains <code>inline code</code>");
 ### Generate PDF
 1. Update `config.js`
 2. Update `content.js`
-3. Run the `run.sh` bash script
+3. `cd path/pdf-portfolio-template`
+3. Execute `run.sh` bash script
 4. The PDF will be generated and saved in the `/output` folder as `output.pdf`.
