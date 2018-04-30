@@ -1,9 +1,10 @@
 ## Documentation
 
 ### Using sample files
-1. `cd path/pdf-portfolio-template/sample`
-2. Execute `sample-run.sh` bash script
-3. The PDF will be generated and saved in the `../output` folder as `sample-output.pdf`
+1. `cd` into your working directory
+2. `cd pdf-portfolio-template/sample`
+3. Execute `sample-run.sh` bash script
+4. The PDF will be generated and saved in the `../output` folder as `sample-output.pdf`
 
 `sample-run.sh` uses the pre-populated `sample_config.js` and `sample_content.js` files in the `/sample` directory to generate a sample PDF file.
 
@@ -143,12 +144,13 @@ The `addCodeBlock` method accepts two parameters:
 
 ```javascript
 exampleSection.addCodeBlock("JavaScript", `
-var i = 2;
-var len = cars.length;
-var text = "";
-for (; i < len; i++) {
-    text += cars[i] + "<br>";
-}
+  var i = 2;
+  var len = cars.length;
+  var text = "";
+  for (; i < len; i++) {
+      text += cars[i] + "<br>";
+  }
+)
 ```
 
 **Add inline code**
@@ -160,8 +162,9 @@ sectionName.addParagraph("This paragraph contains <code>inline code</code>");
 ```
 
 ### Generate PDF
-1. Update `config.js`
-2. Update `content.js`
-3. `cd path/pdf-portfolio-template`
-3. Execute `run.sh` bash script
-4. The PDF will be generated and saved in the `/output` folder as `output.pdf`
+1. `cd` into your working directory
+2. Update `config.js`
+3. Update `content.js`
+4. `cd pdf-portfolio-template`
+5. Execute `run.sh` bash script
+6. The PDF will be generated and saved in the `/output` folder as `output.pdf`
