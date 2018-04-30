@@ -44,24 +44,30 @@ exampleSection.addParagraph("This will add a new paragraph to a section called e
 ```
 
 **Add a paragraph**
-Use the paragraph method to add paragraphs to a section. The `addParagraph` method accepts one parameter: a `string` to be displayed as a paragraph.
+
+Use the paragraph method to add paragraphs to a section. The `addParagraph` method accepts one parameter:
+1. A `string` to be displayed as a paragraph.
 
 ```javascript
 sectionName.addParagraph("This will add a new paragraph to a section called sectionName.");
 ```
 
-HTML formatting tags can be included inside the `<p>` tags to add additional formatting the text.
+HTML formatting tags can be included inside the parameter string to add additional formatting the text.
 
 ```javascript
 sectionName.addParagraph("This will add a <strong>new paragraph<strong> with <e>additional</e> formatting.");
 ```
 
-  This will add a **new paragraph** with _additional_ formatting.
+  \>\> This will add a **new paragraph** with _additional_ formatting.
 
 **Add an image**
 
+Use the image method to add images to a section. The `addImage` method accepts two parameters:
+1. A `string` identifying the source of the image.
+2. (optional) A `string` representing the image caption.
+
 ```javascript
-code
+approach.addImage("assets/app-flow.png", "Figure 1 - Dataflow diagram");
 ```
 
 **Add an image grid**
