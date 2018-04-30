@@ -1,5 +1,5 @@
 # pdf-portfolio-template
-A template using HTML5, CSS3 and JavaScript (ES6) to create and stylise exportable PDF documents for projects in my portfolio.
+A template using HTML5, CSS3 and JavaScript (ES6) to create and stylise exportable PDF documents for projects in a portfolio.
 
 ## Setup guide for MacOS
 *Refer to the [WeasyPrint Documentation](http://weasyprint.readthedocs.io/en/latest/install.html "WeasyPrint Documentation") for installing WeasyPrint on other operating systems.*
@@ -30,7 +30,7 @@ Add `devicon.ttf` to system fonts.
 
 **5. Generate sample PDF**
 
-`cd path/pdf-portfolio-template/sample`
+`cd pdf-portfolio-template/sample`
 
 `bash sample_run.sh`
 
