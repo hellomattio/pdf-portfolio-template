@@ -132,7 +132,7 @@ exampleSection.addUnorderedList(
 
 Use the code block method to add code blocks to the document. Syntax highlighting can be achieved by specifying the syntax language as an input parameter.
 The `addCodeBlock` method accepts two parameters:
-1. A `string` representing the language of the code to be displayed. For a list of supported languages and their identifiers, see the [Prism supported language documentation](http://prismjs.com/#languages-list)
+1. A `string` representing the language of the code to be displayed. For a list of supported languages and their identifiers, see the [Prism supported language documentation](http://prismjs.com/#languages-list).
 2. A `String` representing the code block to be displayed.
 
 ```javascript
@@ -147,8 +147,14 @@ for (; i < len; i++) {
 
 **Add inline code**
 
+Use the inline code functionality to add inline code to section Paragraphs. Inside the `addParagraph` method parameter, use `<code>inline text</code>`to add inline code.
+
 ```javascript
-<code>const a = 2</code>
+sectionName.addParagraph("This paragraph contains <code>inline code</code>");
 ```
 
 ### Generate PDF
+1. Update `config.js`
+2. Update `content.js`
+3. Run the `run.sh` bash script
+4. The PDF will be generated and saved in the `/output` folder as `output.pdf`.
