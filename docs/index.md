@@ -58,8 +58,6 @@ HTML formatting tags can be included inside the parameter string to add addition
 sectionName.addParagraph("This will add a <strong>new paragraph<strong> with <e>additional</e> formatting.");
 ```
 
-  \>\> This will add a **new paragraph** with _additional_ formatting.
-
 **Add an image**
 
 Use the image method to add images to a section. The `addImage` method accepts two parameters:
@@ -72,18 +70,28 @@ approach.addImage("assets/app-flow.png", "Figure 1 - Dataflow diagram");
 
 **Add an image grid**
 
+Use the image grid method to add multiple images to a grid. A table of images will be created, with two images to each row. The `addImageGrid` method accepts an array of arrays as a parameter, identifying the source and (optimally) caption of each image.
+Each inner array consists of:
+1. A `string` identifying the source of the image.
+2. (optional) A `string` representing the image caption.
+
 ```javascript
 exampleSection.addImageGrid([
-  ["assets/demo3.jpg", "Figure 4 - UI Design"],
-  ["assets/demo4.jpg", "Figure 5 - UI Design"]
+  ["assets/image1.jpg", "Figure 1 - UI Design 1"],
+  ["assets/image2.jpg", "Figure 2 - UI Design 2"]
 ]);
 ```
 
-**Add a color pallete**
+**Add a color palette**
+
+Use the color palette method to display a pallete of colours, along with their respective HEX codes.
+The `addColorPalette` method accepts an array of colors identified by `#` and their hex code.
 
 ```javascript
-code
+exampleSection.addColorPalette("#282C33", "#ffffff", "#F4F4F4", "#F5F2F0");
 ```
+
+![Color palette]({{ site.baseurl }}/assets/color-palette.png "Color pallete")
 
 **Add a sub-heading**
 
@@ -94,25 +102,33 @@ code
 **Add an ordered list**
 
 ```javascript
-code
+exampleSection.addOrderedList(
+  "List item 1",
+  "List item 2",
+  "List item 3"
+)
 ```
 
 **Add an ordered list**
 
 ```javascript
-code
+exampleSection.addUnorderedList(
+  "List item 1",
+  "List item 2",
+  "List item 3"
+)
 ```
 
 **Add a code block**
 
 ```javascript
-code
+exampleSection.addCodeBlock("JavaScript", `const exampleSection = new Section("Example Section");`);
 ```
 
 **Add inline code**
 
 ```javascript
-code
+<code>const a = 2</code>
 ```
 
 ### Generate PDF
