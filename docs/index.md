@@ -33,10 +33,80 @@ If a logo is not available in dev icon, simply link to the path of the logo inst
 #### Adding body content
 The body of the document is made up of sections (for example, "Introduction" or "Design Process"). Each section has its own content, which can include text, images, lists etc.
 
-To create a new section, a new Section class should be defined: `const sectionName = new Section("<Section title>");`.
-Once a section is created, content can be added to it - for example: `sectionName.addParagraph("This will add a new paragraph to the section called sectionName.");`
+To create a new section, a new Section class should be defined:
+```javascript
+const exampleSection = new Section("<Section title>");
+```
 
-**Add paragraph**
+Once a section is created, content can be added to it - for example:
+```javascript
+exampleSection.addParagraph("This will add a new paragraph to a section called exampleSection.");
+```
 
+**Add a paragraph**
+Use the paragraph method to add paragraphs to a section. The `addParagraph` method accepts one parameter: a `string` to be displayed as a paragraph.
+
+```javascript
+sectionName.addParagraph("This will add a new paragraph to a section called sectionName.");
+```
+
+HTML formatting tags can be included inside the `<p>` tags to add additional formatting the text.
+
+```javascript
+sectionName.addParagraph("This will add a <strong>new paragraph<strong> with <e>additional</e> formatting.");
+```
+
+  This will add a **new paragraph** with _additional_ formatting.
+
+**Add an image**
+
+```javascript
+code
+```
+
+**Add an image grid**
+
+```javascript
+exampleSection.addImageGrid([
+  ["assets/demo3.jpg", "Figure 4 - UI Design"],
+  ["assets/demo4.jpg", "Figure 5 - UI Design"]
+]);
+```
+
+**Add a color pallete**
+
+```javascript
+code
+```
+
+**Add a sub-heading**
+
+```javascript
+code
+```
+
+**Add an ordered list**
+
+```javascript
+code
+```
+
+**Add an ordered list**
+
+```javascript
+code
+```
+
+**Add a code block**
+
+```javascript
+code
+```
+
+**Add inline code**
+
+```javascript
+code
+```
 
 ### Generate PDF
