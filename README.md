@@ -37,3 +37,6 @@ Add `devicon.ttf` to system fonts.
 ## Documentation
 
 https://hellomattio.github.io/pdf-portfolio-template/
+
+## Example PDF output
+https://github.com/hellomattio/pdf-portfolio-template/raw/master/output/sample_output.pdf
