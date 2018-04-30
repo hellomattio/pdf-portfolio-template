@@ -1,7 +1,7 @@
 // Configure document
-const projectTitle = "Software Project PDF Generator";
-const projectSubtitle = "A JavaScript tool to generate beautiful PDF documents for your projects.";
-const projectAuthor = "Matt Doyle";
-const authorPhone = "0407 417 405"
-const authorEmail = "hello@matt.fyi"
-const coverImageSource = "assets/main.png";
+const projectTitle = "Project Title";
+const projectSubtitle = "Project Description";
+const projectAuthor = "Your Name";
+const authorPhone = "0000 000 000"
+const authorEmail = "name@example.com"
+const coverImageSource = "/image/source";
