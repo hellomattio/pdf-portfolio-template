@@ -30,7 +30,7 @@ Add `devicon.ttf` to system fonts.
 
 **5. Generate sample PDF**
 
-`cd pdf-portfolio-template/sample`
+`cd path/pdf-portfolio-template/sample`
 
 `bash sample_run.sh`
 
