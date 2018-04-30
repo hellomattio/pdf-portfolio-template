@@ -2,14 +2,14 @@
 
 ## Usage
 ### Configure document metadata
-Open `config.js` and enter the following information:
+Open `config.js` and enter values for:
 
-1. `projectTitle` = Project title
-2. `projectSubtitle` = Project subtitle
-3. `projectAuthor` = Project author
-4. `projetPhone` = Contact number of the project author
-5. `authorEmail` = Contact email of the project author
-6. `coverImageSource` = Path to the cover page feature image
+1. `projectTitle`
+2. `projectSubtitle`
+3. `projectAuthor`
+4. `projectPhone`
+5. `authorEmail`
+6. `coverImageSource`
 
 Save the file before closing.
 
@@ -26,6 +26,9 @@ createToolDisplay([
 ]);
 {{ "{% endhighlight " }}%}
 
-
+{% highlight javascript %}
+/* Some pointless Javascript */
+var rawr = ["r", "a", "w", "r"];
+{% endhighlight %}
 
 ### Generate PDF
