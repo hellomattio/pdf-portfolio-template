@@ -26,7 +26,7 @@ createToolDisplay([
 ]);
 ```
 
-The Devicon font is used to display the icons. To find an icon and its respective shortcode, use the [Devicon documentation]<(http://konpa.github.io/devicon/).
+The Devicon font is used to display the icons. To find an icon and its respective shortcode, use the [Devicon documentation](http://konpa.github.io/devicon/).
 
 If a logo is not available in dev icon, simply link to the path of the logo instead, e.g. `assets/logo.png`.
 
@@ -35,7 +35,7 @@ The body of the document is made up of sections (for example, "Introduction" or 
 
 To create a new section, a new Section class should be defined:
 ```javascript
-const exampleSection = new Section("<Section title>");
+const exampleSection = new Section("Section title");
 ```
 
 Once a section is created, content can be added to it - for example:
@@ -65,7 +65,7 @@ Use the image method to add images to a section. The `addImage` method accepts t
 2. (optional) A `string` representing the image caption.
 
 ```javascript
-approach.addImage("assets/app-flow.png", "Figure 1 - Dataflow diagram");
+sectionName.addImage("assets/app-flow.png", "Figure 1 - Dataflow diagram");
 ```
 
 **Add an image grid**
@@ -85,21 +85,27 @@ exampleSection.addImageGrid([
 **Add a color palette**
 
 Use the color palette method to display a pallete of colours, along with their respective HEX codes.
-The `addColorPalette` method accepts an array of colors identified by `#` and their hex code.
+The `addColorPalette` method accepts an `array` of colors identified by `#` and their hex code in the form of a `string`.
 
 ```javascript
-exampleSection.addColorPalette("#282C33", "#ffffff", "#F4F4F4", "#F5F2F0");
+exampleSection.addColorPalette("#f77062", "#fe5196");
 ```
 
 ![Color palette]({{ site.baseurl }}/assets/color-palette.png "Color pallete")
 
 **Add a sub-heading**
 
+Use the h2 header method to add subheadings to the document. Subheadings are useful to break up sections into multiple parts.
+The `addH2Header` method accepts a `string` as a parameter, which will be represented as a subheading.
+
 ```javascript
-code
+exampleSection.addH2Header("A subheading");
 ```
 
 **Add an ordered list**
+
+Use the ordered list method to represent content in an ordered list.
+The `addOrderedList` method accepts an `array` of `strings` as a parameter, with each string populating a new list item.
 
 ```javascript
 exampleSection.addOrderedList(
@@ -111,6 +117,9 @@ exampleSection.addOrderedList(
 
 **Add an ordered list**
 
+Use the unordered list method to represent content in an unordered list.
+The `addUnorderedList` method accepts an `array` of `strings` as a parameter, with each string populating a new list item.
+
 ```javascript
 exampleSection.addUnorderedList(
   "List item 1",
@@ -121,8 +130,19 @@ exampleSection.addUnorderedList(
 
 **Add a code block**
 
+Use the code block method to add code blocks to the document. Syntax highlighting can be achieved by specifying the syntax language as an input parameter.
+The `addCodeBlock` method accepts two parameters:
+1. A `string` representing the language of the code to be displayed. For a list of supported languages and their identifiers, see the [Prism supported language documentation](http://prismjs.com/#languages-list)
+2. A `String` representing the code block to be displayed.
+
 ```javascript
-exampleSection.addCodeBlock("JavaScript", `const exampleSection = new Section("Example Section");`);
+exampleSection.addCodeBlock("JavaScript", `
+var i = 2;
+var len = cars.length;
+var text = "";
+for (; i < len; i++) {
+    text += cars[i] + "<br>";
+}
 ```
 
 **Add inline code**
